@@ -43,7 +43,7 @@ round(2.3456 , 2) # 2.35
 
 import math # biblioteka dlya matematicheskix raschetov
 
-# math.sqrt(25) # 5
+# math.sqrt(25) # 5 sqrt - kvadratnyi koren'
 # math.factorial(5) # 120
 # 1 *2 * 3 * 4 * 5 - math.factorialchisla 5
 # math.pi =  chislo pi
