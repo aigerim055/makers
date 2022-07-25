@@ -1,7 +1,7 @@
 '''строки'''
 
 # str()
-# строки - это неизменяемый , упорядочунный , indeksirovannyi  тип данных
+# строки - это неизменяемый , упорядоченный , indeksirovannyi  тип данных
 
 
 # string = " hello "
@@ -40,7 +40,7 @@ my_str.count('l')  # 3 - schitaet colichestvo jojdeniy peredannoi podstroki
 
 '''индексы и срезы'''
 str7 = 'hello world'
-# индекс - это порядковы номер символа в строке(nachinaya s 0)
+# индекс - это порядковый номер символа в строке(nachinaya s 0)
 # 'makers'
 #  012345
 # -054321
