@@ -132,3 +132,4 @@ a = 10
 print(['ok' , 'not ok'][a > 10]) #ok
 print(['ok' , 'not ok'][a > 5])  #not ok
 
+
