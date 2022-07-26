@@ -128,8 +128,53 @@ not True  #False
 # print(int(True))  #1
 True + True #2
 
-a = 10
-print(['ok' , 'not ok'][a > 10]) #ok
-print(['ok' , 'not ok'][a > 5])  #not ok
+# a = 10
+# [дейсттие1 б действие2][условие]
+# print(['ok' , 'not ok'][a > 10]) #ok
+# print(['ok' , 'not ok'][a > 5])  #not ok
+
+''' тернарный оператор '''
+# a = ''
+# msg = input('vvedite soobshenie: ')
+# if len(msg) > 10:
+#     a = 'soobshenie dlinnee 10 simvolov'
+# else:
+#     a = 'soobshenie menshe 10 simvolov'
+# print(a)
+
+# msg = input('vvedite soobshenie: ')
+# print('soobshenie dlinnee 10 simvolov' if len(msg) > 10 else 'soobshenie menshe 10 simvolov')
+# действие if условие else другое__действие
 
 
+# a = 1
+# if a:
+#     print('ok')
+
+# a = 'string'
+# assert len(a) == 0 
+# print('it\'s ok')
+
+# num1 = int(input('1; '))
+# assert num1 == 30, 'no'
+# print('ok')
+
+# x = int(input())
+# y = int(input())
+
+# if x % y != 0 :
+#     print('x не делиться на y')
+#     print(f'частное: {x // y}')
+#     print(f'остаток: {x % y}')
+# elif x % y == 0:
+#     print('x делиться на y')
+#     print(f'частное: {x // y}')
+
+year = int(input())
+if year % 4 == 0:
+    if year % 100 != 0 :
+        print('YES')
+elif year % 400 == 0:
+    print('YES')
+else:
+    print('NO')
