@@ -8,8 +8,7 @@
 # list_ = [1 , 'str' , True , False , [2,3] , None , {'a': 12} , {1, 2} , ('a' , 'b' , 'c')]
 # print(list_)
 
-import numbers
-from re import S
+
 
 
 list1 = [1, 2, 3, 4, 5, [6, 7]]
