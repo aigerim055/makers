@@ -170,11 +170,15 @@ True + True #2
 #     print('x делиться на y')
 #     print(f'частное: {x // y}')
 
-year = int(input())
-if year % 4 == 0:
-    if year % 100 != 0 :
-        print('YES')
-elif year % 400 == 0:
-    print('YES')
-else:
-    print('NO')
+# year = int(input())
+# if year % 4 == 0:
+#     if year % 100 != 0 :
+#         print('YES')
+# elif year % 400 == 0:
+#     print('YES')
+# else:
+#     print('NO')
+# a = 10
+# print(['ok' , 'not ok'][a > 10]) #ok
+# print(['ok' , 'not ok'][a > 5])  #not ok
+
