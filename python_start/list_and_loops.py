@@ -11,6 +11,9 @@
 
 
 
+from socket import MsgFlag
+
+
 list1 = [1, 2, 3, 4, 5, [6, 7]]
         #0   1  2  3  4    5
 list1[0] #1
@@ -141,5 +144,144 @@ name_list = ['azamat', 'ivan', 'zeynep', 'aliya']
 # my_list = ['a', 'b', 'c', 'd', 'e']
 # my_list.reverse()
 # # print(my_list) #['e', 'd', 'c', 'b', 'a']
+
+
+b5 = ['a', 'b', 'c', 'a', 'a']
+# print(b5.count('a')) # 3
+
+# print(b5.index('c')) # 2
+
+''' циклы '''
+
+# цикл - многократное выполнение определение участка кода
+
+
+iter_list = [1, 2, 3, 4, 5]
+# iter_list[0]
+# iter_list[1]
+# iter_list[2]
+# iter_list[3]
+# iter_list[4]
+
+
+
+# 1. for
+# 2. while
+
+# for item in iter_list:
+        # print(item)
+        
+
+# итерация - это повторения какого либо действия
+
+# for - цикл работает до тех пор, пока элементы в итерируемом обьекте не заканчиваются
+# for елемент in итерируемый_обьект:
+# #         тело цикла
+
+# mail_list = ['azamat', 'mirbek', 'baatai', 'alym']
+# result = []
+# for  name in mail_list:
+#         gmail = name  + '@gmail.com'
+#         result.append(gmail)
+# print(result)
+
+
+# int 
+# list
+# str
+# bool
+# set
+# None
+# dict
+# tuple
+
+# # print(dir(list))
+
+# types_list = [int, str, list, bool, None, dict, set, tuple]
+# iter_objs = []
+# non_iter_objs = []
+
+# for obj in types_list:
+#         if '__iter__' in dir(obj):
+#                 iter_objs.append(obj)
+#         else:
+#                 non_iter_objs.append(obj)
+# print(f'iter obj: \n{iter_objs}')
+# print(f'non iter obj: \n{non_iter_objs}')
+
+# range() - функция для генерации последовательности чисел
+# range(start, stop, step)
+# range(stop)
+# print(list(range(10))) #преобразование последовательности чисел в список из чисел
+
+# num_list = []
+# for num in range(9,101):
+        # num_list.append(num)
+# print(num_list)
+
+# num_list = []
+# for num in range(1,101):
+#         if num % 2 == 0:
+#                 num_list.append(num)
+# print(num_list)
+
+# for num in range(0, 101, 2):
+#         num_list.append(num)
+# print(num_list)
+
+# list_lists = [[1, 2, 3], ['a', 'b', 'c'], [4, 5, 6]]
+# for list1 in list_lists:
+#         for elem in list1:
+#                 print(elem)
+
+# for _ in range(5):
+#         print('hello')
+
+
+''' цикл while '''
+# num = 10
+# while num < 11:
+#         print(num)
+# Бесконечный цикд=л
+# while True:
+        # print('hello')
+
+# while условие - цикл работает до тех пор, пока условие истинно(True)
+
+# msg = input('vvedite soobshenie ili stop: ')
+# while msg != 'stop':
+#         print(msg)
+#         msg = input('vvedite soobshenie ili stop: ')
+
+# break - останавливает работу цикла
+# continue - пропускает работу цикла
+
+# while True:
+        # msg = input('vvedite soobshenie ili stop: ')
+        # if msg == 'stop':
+        #         print('-- STOP --')
+        #         break
+        # print(msg)
+
+# while True:
+#        msg = input('vvedite soobshenie: ')
+#         if msg == 'bue':
+#                 print('-- BYE --')
+#                 continue
+#         print(msg)
+
+# for num in range(10):
+#         print(num)
+# else:
+#         print('-- STOP --')
+
+# else в циклах срабатывает при успешном окончании цикла
+
+# for num in range(10):
+#         if num == 5:
+#                 break
+# else:
+#         print('-- STOP --')
+
 
 
