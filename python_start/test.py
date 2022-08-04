@@ -88,3 +88,84 @@ yes
 
 # for k , v in a.items():
 #     print(k,v)
+
+# list_ = []
+# for num in range(1,50):
+#     if num % 2 != 0:
+#         list_.append(num)
+# print(list_)
+
+# list1 = [num for num in range(1, 50) if num % 2 != 0]
+# print(list1)
+
+# list_ = [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+# int_list1  = []
+# for num in list_:
+#     if num > 0:
+#         if num % 2 == 0:
+#             int_list1.append(num)
+# print(int_list1)
+
+
+# int_list = [num  for num in list_ if num > 0 if num % 2 == 0]
+# print(int_list)
+
+# list1 = []
+# for i in range(1, 26):
+#     list1.append(i ** 2)
+# print(list1)
+
+# list_ = [ i ** 2 for i in range(1, 26)]
+# print(list_)
+
+# list1 = []
+# for i in range(1, 101):
+#     if i % 2 == 0:
+#         list1.append(i ** 2)
+#     else:
+#         list1.append(i)
+# print(list1)
+
+# list_ = [i ** 2 if i % 2 == 0 else i for i in range(1,101) ]
+# print(list_)
+
+# list1 = []
+# for i in range(1, 11):
+#     if i % 2 == 0:
+#         list1.append(True)
+#     else:
+#         list1.append(False)
+# print(list1)
+
+# list_ = [True if i % 2 == 0 else False for i in range(1, 11)]
+# print(list_)
+
+# list_name1 = ['paul', 'john', 'george', 'ringo', 'eric', 'patty', 'yoko', 'cynthia', 'linda', 'jude' ] 
+# new_list1 = []
+# for name in list_name1:
+#     if len(name) <= 4:
+#         new_list1.append('shorter')
+#     else:
+#         new_list1.append('longer')
+# print(new_list1)
+
+# new_list = ['shorter' if len(name) <= 4 else 'longer' for name in list_name1]
+# print(new_list)
+
+# dict_ = {}
+# for i in range(1,10):
+#     dict_[i] = i ** 2
+# print(dict_)
+
+# dict_ = {i: i **2 for i in range(1, 10) }
+# print(dict_)
+
+n = int(input())
+dict_ = {}
+for i in range(1, 501):
+    if i % n == 0:
+        dict_[i] = i ** 2
+# print(dict_) 
+
+dict_ = {i:i ** 2  for i in range(1, 501) if i % n == 0}
+print(dict_)
