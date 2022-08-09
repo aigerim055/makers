@@ -276,12 +276,25 @@ yes
 #     return
 # dictionary()
 
-num = 6
-def check(num):
-    if num %2 == 0:
-        "It is even number"
-    else:
-        "It is odd number"
+# num = 6
+# def check(num):
+#     if num %2 == 0:
+#         "It is even number"
+#     else:
+#         "It is odd number"
     
 
-print(check(num))
+# print(check(num))
+
+
+# TASK7
+# try:
+#     age = int(input())
+#     if age < 18:
+#         raise ValueError('Доступ запрещен')
+# except TypeError:
+#     print('Введён некорректный возраст')
+# else:
+#     print('спасибо!')
+# finally:
+#     print('До свидания!')
