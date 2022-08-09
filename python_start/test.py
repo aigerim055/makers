@@ -160,12 +160,128 @@ yes
 # dict_ = {i: i **2 for i in range(1, 10) }
 # print(dict_)
 
-n = int(input())
-dict_ = {}
-for i in range(1, 501):
-    if i % n == 0:
-        dict_[i] = i ** 2
-# print(dict_) 
+# n = int(input())
+# dict_ = {}
+# for i in range(1, 501):
+#     if i % n == 0:
+#         dict_[i] = i ** 2
+# # print(dict_) 
 
-dict_ = {i:i ** 2  for i in range(1, 501) if i % n == 0}
-print(dict_)
+# dict_ = {i:i ** 2  for i in range(1, 501) if i % n == 0}
+# print(dict_)
+
+# list_ = []
+# for num in range(11):
+#     if num % 2 == 0:
+#         print(num)
+#         list_.append(num // 2)
+# print(list_)
+
+# list1 = [num // 2 for num in range(11)  if num % 2 == 0 ]
+# print(list1)
+
+
+# TASK 17
+# dict1 = {1:'hello', 2: 'fucking', 3: 'world', 4: '!'}
+# for k,v in dict1.items():
+#     if k % 2 == 0:
+#         dict1[k] = len(v)
+#     else:
+#         dict1[k] = len(v) ** 3
+# print(dict1)
+
+# a = {k: len(v) if k % 2 == 0 else len(v) ** 3 for k,v in dict1.items()   }
+# print(a)
+
+
+
+# TASK12
+# dict_ = {'first': 1, 'second': 2, 'third': 3}
+# # for k,v in dict_.items():
+# #     if v % 2 == 0:
+# #         dict_[k] = 'even'
+# #     else:
+# #         dict_[k] = 'odd'
+# # print(dict_)
+# a = {k: 'even' if v % 2 == 0 else  'odd' for k,v in dict_.items() }
+# print(a)
+
+
+
+# str_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+# int_list = []
+# for i in str_list:
+#     int_list.append(int(i))
+# print(int_list)
+
+# int_list = [int(i) for i in str_list ]
+# print(int_list)
+
+# string_ = 'In 1984 there were 13 instances of a protest with over 1000 people attending'
+# list_ = []
+
+# # string_.split()
+# for strr in string_.split():
+#     if strr.isalnum:
+#         list_.append(strr)
+# # if string_.split().isalnum():
+# #     list_.append(string_)
+
+# print(list_)
+
+# TASK18
+# set1 = {n for n in range(10)}
+# set2 = {n for n in range(10,20)}
+# full_set = set1.union(set1 , set2)
+# if len(full_set) < 20:
+#     print(f"В этом сете было {20 - len(full_set)} повторения, его длина составляет {len(full_set)}")
+# else:
+#     print("Ваш обьединенный сет полностью уникальный!")
+
+# # TASK11
+# a = {'a': 1, 'b': 5, 'c': 4, 'd': 3}
+# dict_ = 
+
+
+# dict_ = {'key1': 'value1', 'key2': 'value2'}
+# try:
+#     print(dict_['key3'])
+# except KeyError:
+#     print('Нет такого ключа!')
+
+
+
+# def get_string_length(string):
+#     return len(string)
+# print(get_string_length('hello'))
+
+
+# def get_type(type1, type2):
+#     print(type(type1))
+#     print(type(type2))
+#     return
+# get_type(5, 'hello')
+
+
+# def divide(x, y):
+#     return x / y
+# print(divide(10, 5))
+
+
+
+# dict_ ={}
+# def dictionary({'a':3, 123:3}):
+#     for i in dict_.items():
+#         print(i)
+#     return
+# dictionary()
+
+num = 6
+def check(num):
+    if num %2 == 0:
+        "It is even number"
+    else:
+        "It is odd number"
+    
+
+print(check(num))
