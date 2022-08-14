@@ -132,6 +132,9 @@
 # def my_func(*args):
 #     counter = 0
 #     for i in args:
-#         counter += i
+#         try:
+#             counter += i
+#         except TypeError:
+#             print(f'{i}  не явл числом')
 #     return counter
 # print(my_func(1, 2, 3, 4, 'hello', 6))
