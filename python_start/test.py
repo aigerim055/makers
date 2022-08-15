@@ -525,3 +525,59 @@ get_balance()
 # #     print('Сумма не может быть отрицательной! ')
 # else:
 #     print(cash)
+
+# list_ = [-1, 2, 3, 0, 5, -3,7] 
+# for i in list_:
+#   print(i)
+#   if i < 0: 
+#     list_.append('False')
+#   else:
+#     list_.append('True')
+
+# print(list_)
+
+# list_ = [1, 5, -9, 6, -4] 
+# result = all(num > 3 for num in list_ )
+# print(result)
+
+# list_ = [5, 8, 4, 6, 7]
+# result = any(num < 0 for num in list_)
+# print(result)
+
+# list_ = [1, 2, 3, 4] 
+# result = list(map(lambda num1: num1 ** 2, list_))
+# print(result)
+
+
+# list_ = [1, 2, 3, 4] 
+# result = list(filter(lambda num: num % 2 == 0, list_))
+# print(result)
+
+# list_ = ['inheritance', 'solid', 'polymorphism', 'dry', 'yagni',]
+# result = list(filter(lambda str: len(str) > 7, list_))
+# print(result)
+
+
+# list_ = [5, 6, 7, 8] 
+# result = reduce(lambda num1, num2: num1 * num2, list_)
+# print(result)
+
+# TASK8
+# list_ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] 
+# list2 = list(filter(lambda num: num % 2 == 0, list_))
+# list3 = list(filter(lambda num: num % 2 != 0, list_))
+# result = f'even: {len(list2)}, odd: {len(list3)}'
+# print(result)
+
+# list_ = [-1, 2, 3, 5, -3, 7] 
+# result = list(map(lambda num: False if num < 0 else True, list_))
+# print(result)
+
+from functools import reduce
+list_ = ['Paul', 'George', 'Ringo', 'John'] 
+def func(name1, name2):
+    if len(name1) > len(name2):
+        return name1
+    return name2
+result = reduce(func , list_  )
+print(result)
