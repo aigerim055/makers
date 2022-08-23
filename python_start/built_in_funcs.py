@@ -112,7 +112,7 @@ from functools import reduce
 
 # b = ['h', 'e', 'l', 'l', 'o']
 # res2 = enumerate(b, start=12)
-# # print(tuple(res2))
+# print(tuple(res2))
 # for i in res2:
 #     print(i)
 

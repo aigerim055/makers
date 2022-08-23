@@ -573,11 +573,72 @@ get_balance()
 # result = list(map(lambda num: False if num < 0 else True, list_))
 # print(result)
 
-from functools import reduce
-list_ = ['Paul', 'George', 'Ringo', 'John'] 
-def func(name1, name2):
-    if len(name1) > len(name2):
-        return name1
-    return name2
-result = reduce(func , list_  )
-print(result)
+# from functools import reduce
+# list_ = ['Paul', 'George', 'Ringo', 'John'] 
+# def func(name1, name2):
+#     if len(name1) > len(name2):
+#         return name1
+#     return name2
+# result = reduce(func , list_  )
+# print(result)
+
+# dict_ = {'a': 5, 'a': {'a': 1}}
+# print(dict_)
+
+# a = set([1], [2])
+# print(a)
+
+# y = 2
+
+# x = list(lambda x: x + 2, y)
+# print(x)
+
+# try: 
+#     a = 1
+#     b = 2
+#     print(c)
+#     exit
+# except NameError:
+#     print('nnno')
+# else:
+#     print('yes')
+# finally:
+#     print('hello')
+
+# print(locals())
+# print(globals())
+
+
+# list_ = [1,2 ,3, 4]
+# list1 = map(lambda x: x % 2 == 0, list_)
+# print(list(list1))
+
+# list2 = filter(lambda x: x % 2 == 0, list_)
+# print(list(list2))
+
+# list1 = [1, 2, 4]
+# list2 = [1, 3, 4]
+# new_list = list1 + list2
+
+# print(sorted(new_list))
+
+
+
+# file1 = open('task5.txt')
+# numbers = []
+
+# for line in file1:
+#     numbers.append(int(line))
+
+# file2 = open('task6.txt', 'w')
+
+# print(file2.write(f"{min(numbers)}-{max(numbers)}"))
+
+# file1.close()
+# file2.close()
+
+# from functools import reduce
+# list_ = [1, 2, 3, 4]
+# result = reduce(lambda x: x ** 2, list_)
+# print(result)
+
