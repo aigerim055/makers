@@ -106,20 +106,18 @@
 # person1.legs = 3
 # print(person1.legs)
 
-from csv import list_dialects
+
+# class Car:
+#     car_counter = 0
+
+#     def __init__(self, color, model):
+#         self.color = color
+#         self.model = model
+#         Car.car_counter += 1
 
 
-class Car:
-    car_counter = 0
-
-    def __init__(self, color, model):
-        self.color = color
-        self.model = model
-        Car.car_counter += 1
-
-
-    def __str__(self) -> str:
-        return f'color: {self.color} \nmodel: {self.model}'
+#     def __str__(self) -> str:
+#         return f'color: {self.color} \nmodel: {self.model}'
 
 
 # car1 = Car('green', 'Toyota')
@@ -148,7 +146,7 @@ class Car:
 2.инкапсуляция
 3.полиморфизм
 
-не соновные принципы ООП: 
+не основные принципы ООП: 
 4.агрегация
 5.абстракция
 6.композиция
