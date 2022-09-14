@@ -642,3 +642,472 @@ get_balance()
 # result = reduce(lambda x: x ** 2, list_)
 # print(result)
 
+'''
+Создайте класс MyDict который будет наследоваться от встроенного класса dict. Переопределите метод get() таким образом, 
+чтобы при попытке получения несуществующего ключа, по умолчанию он возвращал, вместо None, строку:
+
+Are you kidding?
+Создайте экземпляр класса в переменной 'obj_dict' и попробуйте получить несуществующий ключ методом get().
+
+Например:
+
+obj_dict = MyDict({'some_title': 2}) 
+print(obj_dict.get('some')) 
+Ключа 'some' в нашем словаре нет, есть только 'some_title', в терминале получим:
+
+Are you kidding? 
+Метод get имеет такой синтаксис: словарь.get(ключ, значение), в значение передается то что вы хотите возвратить если такого ключа не существует. 
+
+По умолчанию, если второе значение не передано, метод возвращает None. Для переопределения метода унаследуйте метод от родителя и передайте в метод 
+свое значение.
+'''
+
+
+
+
+
+# class MyDict(dict):
+#     def get(self, key, default = 'are you kidding me?'):
+#         return dict.get(self, key, default)
+
+# obj_dict = MyDict({'some_title': 2}) 
+# print(obj_dict.get('some')) 
+
+
+'''
+Создайте класс Person который будет описывать человека, а точнее его имя - name и возраст - age. Добавьте к классу метод display(), 
+который будет выводить данные об этом человеке.
+
+Создайте второй класс Student, который будет наследоваться от класса Person.
+
+Объекты от класса Student должны иметь все атрибуты, которые были определены в родительском классе и еще один дополнительный атрибут - 
+faculty, который будет описывать факультет, где учится студент.
+
+Создайте метод display_student(), который будет выводить данные об этом студенте.
+
+Создайте от класса Student объект в перемнной obj_student, и выведите данные о нём, как о человеке, затем как о студенте.
+
+'''
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def display(self):
+#         return f'name: {self.name}, age: {self.age}'
+
+# class Student(Person):
+#     def __init__(self, name, age, faculty):
+#         super().__init__(name, age)
+#         self.faculty = faculty
+
+#     def display_student(self):
+#         return f'{super().display()}, faculty: {self.faculty}'
+
+# obj_student = Student('vasya', 33 , 'scince')
+# print(obj_student.display())
+# print(obj_student.display_student())
+
+
+'''
+Создайте класс SmartPhones, экземпляры класса должны иметь такие свойства:
+
+name - название
+color - цвет
+memory - память
+battery - процент заряда батареи
+Значение battery по умолчанию должно быть 0.
+
+Переопредилите метод str так чтобы при распечатке он выдавал строку с названием и памятью смартфона.
+
+У данного класса также должен быть метод charge, который увеличивает значение батареи на указанную величину.
+
+Создайте два дочерних класса от Smartphones:
+
+Iphone - с дополнительным аттрибутом экземпляра - ios и методом send_imessage(принимает в аргументы строку 
+и возвращает эту строку и от какого телефона сообщение было выслано в таком формате - sending 'ваша строка' from 'название объекта-телефона')
+
+Samsung - с дополнительным аттрибутом android и методом show_time(который показывает текущее время)
+
+Создайте объекты phone, iphone7, samsung21 от классов SmartPhones, Iphone, Samsung и примените все методы.
+
+Для правильной работы тестов, проделайте все следующие операции:
+'''
+
+# from datetime import datetime
+
+
+
+# class SmartPhones:
+    
+#     def __init__(self, name, color, memory, battery = 0):
+#         self.name = name
+#         self.color = color
+#         self.memory = memory
+#         self.battery = battery
+        
+
+#     # def charge(self, int):
+#     #     self.int = int
+#     #     f = self.battery + int
+#     #     return f
+
+#     def charge(self,plus_battery):
+#         self.battery += plus_battery
+#         return self.battery
+
+#     def __str__(self):
+#         return f'{self.name} {self.memory}'
+
+
+
+# class Iphone(SmartPhones):
+#     def __init__(self, name, color, memory, ios, battery = 0):
+#         self.ios = ios
+#         super().__init__(name, color, memory, battery)
+
+
+#     def send_imessage(self, string):
+#         self.string = string
+#         return f'sending {string} from {self.__str__()}'
+
+
+# class Samsung(SmartPhones):
+#     def __init__(self, name, color, memory, android, battery = 0):
+#         self.ios = android
+#         super().__init__(name, color, memory, battery)
+
+#     def show_time(self):
+#         t = datetime.now().time()
+#         return t
+
+
+
+
+# phone = SmartPhones('generic', 'blue', '128GB') 
+# print(phone) 
+
+# print(phone.battery) 
+# phone.charge(20) 
+# print(phone.battery) 
+
+# iphone7 = Iphone('Iphone 7', 'gold', '128gb','12.1.3') 
+# print(iphone7)
+# print(iphone7.send_imessage('hello')) 
+
+# samsung21 = Samsung('Samsung A21', 'black', '256gb' , 'Oreo') 
+# print(samsung21.show_time())
+
+
+'''
+Создайте класс ContactList, который должен наследоваться от встроенного класса list.
+
+В вашем классе должен быть реализован метод search_by_name, который должен принимать имя и возвращать список всех совпадений.
+
+Создайте экземпляр класса в переменной all_contacts и передайте список ваших контактов.
+'''
+
+# class ContactList(list):
+
+#     def __init__(self, f = list):
+#         self.f = f
+
+#     result = []
+
+#     def search_by_name(self, string):
+#         result = [elem for elem in self.f if string in elem]
+#         return result
+
+# all_contacts = ContactList(['Ivan', 'Maris', 'Olga', 'Ivan Olya', 'Olya Ivan', 'ivan']) 
+# print(all_contacts.search_by_name('Olya'))
+
+# class Circle:
+#     color = 'blue'
+#     pi = 3.14
+
+#     def __init__(self, radius):
+#         self.radius = radius
+
+#     def get_area(self):
+        
+#         res = self.pi * (self.radius ** 2)
+#         return res
+
+# circle = Circle(2) 
+# circle.get_area()
+
+'''
+Создайте класс BankAccount, у объектов данного класса есть аттрибут balance со значением по умолчанию 0: balance = 0.
+Определите метод withdraw с параметром amount, который будет отнимать сумму от баланса и распечатывать текущий баланс.
+Добавьте еще один метод deposit, который также имеет параметр amount и соответсвенно добавляет сумму к балансу и распечатывает баланс.
+'''
+
+# class BankAccount:
+
+#     def __init__(self, balance = 0 ):
+#         self.balance = balance
+
+#     def withdraw(self, amount):
+#         self.amount = amount
+#         self.balance -= amount
+#         print(f'Ваш баланс: {self.balance} сом')
+
+
+#     def deposit(self, amount):
+#         self.amount = amount
+#         self.balance += amount
+#         print(f'Ваш баланс: {self.balance} сом')
+
+# account = BankAccount()
+# account.deposit(1000) 
+# account.withdraw(500) 
+
+
+'''
+Задание 4
+Создайте класс Taxi, объекты которого имеют такие атрибуты как название компании - name, стоимость посадки - cost, 
+стоимость за каждый пройденный километр - cost_km.
+Добавьте к классу метод get_total_cost, принимающий параметр km - сколько километров составила поездка и возвращающий стоимость поездки.
+Создайте три экземпляра класса Taxi для трех разных компаний Namba, Yandex и Jorgo и расчитайте стоимость поездки на каждой из них.
+'''
+
+# class Taxi:
+#     def __init__(self, name, cost, cost_km):
+#         self.name = name
+#         self.cost = cost
+#         self.cost_km = cost_km
+
+#     def get_total_cost(self, km):
+#         self.km = km 
+#         price = self.cost + self.cost_km * km
+#         res = f'Такси {self.name}, стоимость поездки: {price} сом '
+#         return res
+
+# taxi1 = Taxi('Namba', 10, 33)
+# taxi2 = Taxi('Yandex', 21, 4)
+# taxi3 = Taxi('Jorgo', 12, 11)
+# print(taxi1.get_total_cost(10)) 
+# print(taxi2.get_total_cost(6)) 
+# print(taxi3.get_total_cost(14))  
+
+'''
+контактов должны быть такие аттрибуты:
+
+name - имена
+last_name - фамилии
+phone - телефонные номера
+Добавьте метод get_info, который выводит информацию о контакте в следующем виде:
+
+contact.get_info()
+Вывод в терминал:
+
+Контакт: John Snow, телефон: +996707707707
+Затем, создайте объект от класса Phone в переменной contact и примените метод get_info.
+'''
+
+# class Phone:
+
+#     def __init__(self, name, last_name, phone):
+#         self.name = name
+#         self.last_name = last_name
+#         self.phone = phone
+
+#     def get_ingo(self):
+#         i = f'Контакт: {self.name} {self.last_name}, телефон: {self.phone}'
+#         print(i)
+
+# contact = Phone('John', 'Snow', '+996707707707')
+# contact.get_ingo()
+
+
+'''
+Напишите класс Salary для расчета налогов на заработную плату. У класса должна быть обязательная переменная класса - percent = 8, 
+обозначающий процент налога на ежемесячную зарплату - 8%.
+
+Объекты класса должны иметь, в качестве атрибутов сумму зарплаты salary и стаж работы в месяцах - experience.
+
+Также у класса должен быть метод count_percent, расчитывающий сумму налога заплаченного за весь стаж работы.
+
+Создайте экземпляр класса obj и посчитайте сумму вашего налога.
+
+К примеру, если у вашего объекта salary имеет значение 10000, а experience равен 10, то:
+
+print(obj.count_percent()) 
+Выдаст вам такой результат в терминале:
+
+8000.0 
+Каждый месяц с зарплаты в 10000 сомов снимается 8% на налоги, т.е 800 сом, за 10 месяцев трудового стажа эта сумма будет 8000.0 сом
+'''
+
+# class Salary:
+#     percent = 8
+
+#     def __init__(self, salary, experience):
+#         self.salary = salary
+#         self.experience = experience
+
+#     def count_precent(self):
+#         tax_per_month = self.salary / 100 * self.percent
+#         result = self.experience * tax_per_month
+#         return result
+
+# obj = Salary(8000, 10)
+# print(obj.count_precent()) 
+
+
+'''
+Задание 8
+Создайте класс Password, экземеплярами класса являются пароли в виде строк. У класса должен быть метод validate для валидации пароля:
+
+В начале, проверьте, что пароль состоит из минимум 8 символов, но меньше 15, если условие не соблюдено, должны выйти ошибка с текстом:
+Password should be longer than 8, and less than 15
+Вторая проверка должна проверять что пароль содержит цифры, и в случае отсутствия цифр, выводить ошибку с текстом:
+Password should contain numbers too
+Третья проверка, проверяет содержит ли пароль буквы и в случае не совпадения, выводит ошибку с текстом:
+Password should contain letters as well
+В конце проверьте, содержит ли пароль хотя бы один из символов: '@', '#', '&', '$', '%', '!', '~', '*', если условие не выполнено выводите ошибку с текстом:
+Your password should have some symbols
+если одно из условий не выполнено, выводите соответствующее исключение, если же все условия выполнены метод validate должен возвращать строку:
+
+Ваш пароль сохранен.
+Также переопределите метод __str__, чтобы при попытке распечатать сам пароль, вам выдавалась строка из звездочек количество которых равно длине пароля.
+
+К примеру, если пароль joe@123456, при попытке распечатать пароль, в терминал должно выводиться: **********
+
+пишите код для проверки пароля в указанном порядке
+'''
+
+# from curses.ascii import isalpha, isdigit
+
+
+# class Password:
+
+#     def __init__(self, password: str):  
+#         self.password = password
+
+#     def validate(self):
+#         p = self.password
+
+#         if len(p) > 8 and len(p) < 15:
+#             return 'Password should be longer than 8, and less than 15'
+#         if p.isdigit() == False:
+#             return 'Password should contain numbers too'
+#         if p.isalpha() == False:
+#             return 'Password should contain letters as well'
+#         if p ==  '@, #, &, $, %, !, ~, *':
+#             return 'Your password should have some symbols'
+#         else:
+#             return 'Ваш пароль сохранен!'
+
+#     def __str__(self):
+#         pass_length = len(self.password)
+#         return pass_length * '*'
+
+# password = Password('we@#3fdfe')
+
+# print(password.validate())
+
+'''
+Создайте класс Math, у экземпляра которого должно быть свойство value. У классa Math должно быть 3 метода:
+
+get_factorial - возвращает факториал числа(перемножить все составные числа до самого числа)
+
+get_sum - возвращает сумму цифр числа
+
+get_mul_table - возвращает таблицу умножения для числа до 10 в формате:
+
+5x1=5
+5x2=10
+5x3=15
+5x4=20
+5x5=25
+5x6=30
+5x7=35
+5x8=40
+5x9=45
+5x10=50
+Создайте экземпляр класса и примените к нему все методы.
+
+Например, если экземпляром класса Math является число 11,
+
+вызов get_factorial возвратит такой результат:
+
+39916800 
+т.к 1 x 2 x 3 x 4 x 5 x 6 x 7 x 8 x 9 x 10 x 11 = 39916800
+
+метод get_sum, возвратит:
+
+2 
+т.к число 11 состоит из двух цифр 1 и 1, сумма 1 + 1 = 2
+
+метод get_mul_table возвратит:
+
+11 x 1 = 11 
+11 x 2 = 22 
+11 x 3 = 33 
+11 x 4 = 44 
+11 x 5 = 55 
+11 x 6 = 66 
+11 x 7 = 77 
+11 x 8 = 88 
+11 x 9 = 99 
+11 x 10 = 110 
+результат методов возвращайте ключевым словом return, print() использовать не надо.
+'''
+# import math
+
+# class Math:
+#     def __init__(self, value):
+#         self.value = value
+    
+#     def get_factorial(self):
+#         fact = math.factorial(self.value)
+#         return fact
+
+#     def get_sum(self):
+#         num_list = list(map(int, str(self.value)))
+#         result = sum(num_list)
+#         return result
+
+#     def get_mul_table(self):
+#         result = ''
+#         num_list = list(range(1, 11))
+#         for num in num_list:
+#             line = self.value * num
+#             result += f'{self.value}x{num}={line}\n'
+#         return result
+
+# num = Math(11)
+
+# print(num.get_factorial())
+# print(num.get_sum())
+# print(num.get_mul_table())
+
+
+
+
+'''
+Создайте класс A и объявите в нём 3 метода:
+
+публичный(public) (возвращает строку 'Public method'),
+защищённый(protected) (возвращает строку 'Protected method')
+приватный(private) (возвращает строку 'Private method')
+Затем создайте экземпляр в переменной obj1 данного класса и вызовите (с выводом в терминал)
+по очереди каждый из методов. Не забудьте, что нужно вызвать приватный метод так, чтобы ошибка не выводилась
+'''
+
+class A:
+    def public(self):
+        return 'Public method'
+
+    def _protected(self):
+        return 'Protected method'
+
+    def __private(saelf):
+        return 'Private method'
+
+obj = A()
+print(obj.public())
+print(obj._protected())
+print(obj._A__private())
