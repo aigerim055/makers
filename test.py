@@ -1097,17 +1097,115 @@ get_mul_table - возвращает таблицу умножения для ч
 по очереди каждый из методов. Не забудьте, что нужно вызвать приватный метод так, чтобы ошибка не выводилась
 '''
 
-class A:
-    def public(self):
-        return 'Public method'
+# class A:
+#     def public(self):
+#         return 'Public method'
 
-    def _protected(self):
-        return 'Protected method'
+#     def _protected(self):
+#         return 'Protected method'
 
-    def __private(saelf):
-        return 'Private method'
+#     def __private(saelf):
+#         return 'Private method'
 
-obj = A()
-print(obj.public())
-print(obj._protected())
-print(obj._A__private())
+# obj = A()
+# print(obj.public())
+# print(obj._protected())
+# print(obj._A__private())
+
+'''
+Объявите класс Car, в котором будет приватный атрибут экземпляра класса speed.
+
+Затем, определите метод set_speed, который будет устанавливать значение скорости и метод show_speed, который возвращает значение скорости.
+
+Создайте экземпляр в переменной car1 класса Car и вызовите все методы.
+
+
+'''
+
+# class Car:
+#     speed = 0
+#     # def __init__(self):
+#     #     self.speed = speed
+
+#     def set_speed(self, new):
+#         self.speed = new
+
+#     def show_speed(self):
+#         return self.speed
+
+# car1 = Car() 
+# print(car1.show_speed()) 
+# car1.set_speed(20) 
+# print(car1.show_speed())
+
+
+# a = '12342342345' 
+# b = [1,['a',5,6],2,3,4,5] 
+# c = {1:'a', 2: {'a': 1, 'b': 2}, 3:'c'}
+
+# for i in (a, b, c):
+#     print(len(i))
+
+
+'''
+Задание 2
+Создайте классы Dog и Cat с одинаковым методом voice.
+
+Для собак он должен печатать "Гав", для кошек "Мяу".
+
+Объявите для каждого из классов по экземпляру, для класса Cat экземпляр в переменной barsik, а для Dog экземпляр rex.
+
+Затем, вне класса объявить функцию to_pet(), которая будет принимать животное и вызывать у него метод voice().
+
+
+'''
+
+# class Dog:
+#     def voice(self):
+#         print('Гав')
+
+# class Cat:
+#     def voice(self):
+#         print('Мяу')
+
+# barsik = Cat()
+# rex = Dog()
+
+
+
+'''
+Создайте класс Account и переопределите в нем методы __init__, __repr__, __str__ и __del__.
+
+Объекты класса должны содержать атрибуты:
+
+name - имени держателя счета
+balance - баланса
+city - города, где открыт счет
+Переопределенные методы:
+
+__init__ должен также выводить сообщение "Счет создан"
+__repr__ должен возвращать имя держателя счета и баланс
+__str__ должен возвращать сообщение 'Hello' и также информацию о держателе счета: "Hello 'name' 'balance' 'city'" где вместо 'name', 'balance' и 'city' должны быть соответствующие значения атрибутов объекта.
+__del__ должен выводить сообщение "Пока"
+Создайте обьект класса obj_account с параметрами ('Rick', 2013, 'Bishkek') и вызовите все методы.
+
+Ввод должен быть:
+
+obj_account = Account("Rick", 2013, 'Bishkek')  
+print(obj_account)  
+print(repr(obj_account)) 
+А вывод:
+
+Счет создан   
+Hello Rick 2013 Bishkek 
+Rick 2013  
+Пока 
+'''
+
+# class Acount:
+
+#     def __init__(self, name):
+#         self.name = name 
+
+#     def __repr__(self):
+#         return self.name
